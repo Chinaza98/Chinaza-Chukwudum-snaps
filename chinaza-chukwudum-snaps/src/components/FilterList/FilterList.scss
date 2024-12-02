@@ -1,0 +1,32 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.Filterlist {
+  margin: 0;
+  background-color: #b7cec9;
+  padding: 1rem;
+
+  @include desktop {
+    width: 60%;
+    margin: 1rem;
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+
+    &-items {
+      background-color: #fff;
+      margin: 6px 10px;
+      padding: 8px 12px;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    &-items:hover {
+      background-color: #49675a;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.Footer {
+  padding: 1.5rem;
+
+  &__list {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__icons {
+    margin-right: 2rem;
+  }
+}

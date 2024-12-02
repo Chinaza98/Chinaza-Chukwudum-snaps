@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "NewsReader";
+  src: url("../../assets/fonts/Newsreader-Light.woff2") format("woff2"),
+    url("../../assets/fonts/Newsreader-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "NewsReader";
+  src: url("../../assets/fonts/Newsreader-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/Newsreader-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "NewsReader";
+  src: url("../../assets/fonts/Newsreader-LightItalic.woff2") format("woff2"),
+    url("../../assets/fonts/Newsreader-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}

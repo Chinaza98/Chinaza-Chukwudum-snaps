@@ -1,0 +1,23 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.photos {
+  &__title {
+    font-size: 20px;
+    margin-top: 2rem;
+    padding-left: 2rem;
+
+    &-body {
+      font-size: 28px;
+      line-height: 2.5rem;
+      padding-left: 2rem;
+    }
+  }
+
+  &__list {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

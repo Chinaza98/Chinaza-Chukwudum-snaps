@@ -1,0 +1,40 @@
+.Photo {
+  list-style-type: none;
+  border: 3px solid #b7cec9;
+  width: 90%;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #e4efec;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  &__owner {
+    background-color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    max-width: 35%;
+    border-top-left-radius: 0.5rem;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 17rem;
+  }
+
+  &__tags {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin-top: 1rem;
+
+    &-item {
+      padding: 0.5rem;
+      background-color: #fff;
+      margin: 0.25rem;
+      border-radius: 0.5rem;
+    }
+  }
+}

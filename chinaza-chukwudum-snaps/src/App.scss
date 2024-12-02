@@ -1,0 +1,36 @@
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #effaf7;
+  margin: 0;
+  font-family: "Newsreader";
+}
+
+.nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__button {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  &__button:hover {
+    background-color: $color-accent;
+    color: $color-light;
+  }
+}
+
+.container {
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
