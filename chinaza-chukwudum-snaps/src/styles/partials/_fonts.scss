@@ -19,3 +19,15 @@
   font-weight: 300;
   font-style: italic;
 }
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Light.woff") format(woff);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Medium.woff") format(woff);
+  font-weight: 500;
+}

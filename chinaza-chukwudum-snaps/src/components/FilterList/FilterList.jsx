@@ -2,13 +2,10 @@ import "./FilterList.scss";
 import tagData from "../../data/tags.json";
 
 function FilterList(props) {
-  //   const [tags, setTags] = useState[tagsData];
-  //   console.log("FilterList props:", props);
-  //   console.log(props);
   return (
-    <section className="Filterlist">
-      <h3>Filter:</h3>
-      <ul className="Filterlist__list">
+    <section className="filterlist">
+      <h3 className="filterlist__title">Filter:</h3>
+      <ul className="filterlist__list">
         {tagData.map((tag, index) => {
           let isSelectedTag = tag === props.selectedTag;
           return (
@@ -17,7 +14,7 @@ function FilterList(props) {
                 props.handleTagClick(tag);
               }}
               key={index}
-              className={"Filterlist__list-items"}
+              className={"filterlist__list-items"}
             >
               {tag}
             </li>

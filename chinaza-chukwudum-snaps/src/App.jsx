@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <Header setStatus={handleStatusClick} />
-      <p className="filter__container">Selected Filter: {selectedTag}</p>
+      <p className="filterlist__container">Selected Filter: {selectedTag}</p>
       <div className="container">
         {filterStatus ? (
           <FilterList

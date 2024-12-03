@@ -26,7 +26,6 @@ function PhotoList(props) {
       </p>
       <ul className="photos__list">
         {filteredPhotos.map((photo) => {
-          // console.log(photo);
           return <PhotoItem key={photo.id} photo={photo} />;
         })}
       </ul>

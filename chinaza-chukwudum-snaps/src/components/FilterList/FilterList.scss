@@ -1,14 +1,22 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
 
-.Filterlist {
+.filterlist {
   margin: 0;
-  background-color: #b7cec9;
+  background-color: #e4efec;
   padding: 1rem;
 
   @include desktop {
     width: 60%;
     margin: 1rem;
+  }
+
+  &__title {
+    font-family: "Outfit";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
   }
   &__list {
     list-style-type: none;
@@ -22,11 +30,16 @@
       padding: 8px 12px;
       border-radius: 0.5rem;
       cursor: pointer;
+      border: 2px solid #b7cec9;
     }
 
     &-items:hover {
       background-color: #49675a;
       color: #fff;
     }
+  }
+
+  &__container {
+    margin-left: 1rem;
   }
 }

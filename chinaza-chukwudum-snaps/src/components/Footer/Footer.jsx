@@ -6,26 +6,32 @@ import Pinteresticon from "../../assets/images/Pinterest.svg";
 
 function Footer() {
   return (
-    <footer className="Footer">
-      <h1>Snaps</h1>
-      <ul className="Footer__list">
-        <li>For Photographers</li>
-        <li>Hire Talent</li>
-        <li> Inspiration</li>
+    <footer className="footer">
+      <h1 className="footer__logo">Snaps</h1>
+      <ul className="footer__list">
+        <div className="footer__list1">
+          <li className="footer__list-items">For Photographers</li>
+
+          <li className="footer__list-items">Hire Talent</li>
+          <li className="footer__list-items"> Inspiration</li>
+        </div>
+
         <br></br>
 
-        <li>About</li>
-        <li>Careers</li>
-        <li>Support</li>
+        <div className="footer__list2">
+          <li className="footer__list-items">About</li>
+          <li className="footer__list-items">Careers</li>
+          <li className="footer__list-items">Support</li>
+        </div>
       </ul>
-      <div className="Footer__icons">
-        <img src={Facebookicon} />
+      <div className="footer__icon">
+        <img src={Facebookicon} className="footer__icon-items" />
 
-        <img src={Twittericon} />
+        <img src={Twittericon} className="footer__icon-items" />
 
-        <img src={Instagramicon} />
+        <img src={Instagramicon} className="footer__icon-items" />
 
-        <img src={Pinteresticon} />
+        <img src={Pinteresticon} className="footer__icon-items" />
       </div>
     </footer>
   );

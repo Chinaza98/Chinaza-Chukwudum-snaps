@@ -1,13 +1,57 @@
-.Footer {
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
   padding: 1.5rem;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 12rem;
+  }
+
+  &__list1 {
+    @include tablet {
+      margin-right: 4rem;
+    }
+  }
 
   &__list {
     text-decoration: none;
     list-style-type: none;
     padding: 0;
+    font-family: "Outfit";
+    font-weight: 500;
+    font-size: 15px;
+
+    @include tablet {
+      display: flex;
+      padding-right: 2rem;
+    }
+
+    &-items {
+      margin-bottom: 0.5rem;
+    }
   }
 
-  &__icons {
+  &__icon {
     margin-right: 2rem;
+
+    @include tablet {
+      position: absolute;
+      top: 80%;
+    }
+
+    &-items {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__logo {
+    font-family: "Newsreader";
+    font-weight: 400;
+    font-size: 32px;
   }
 }

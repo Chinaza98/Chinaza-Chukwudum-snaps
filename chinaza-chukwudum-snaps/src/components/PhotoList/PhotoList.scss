@@ -1,23 +1,26 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
 
 .photos {
   &__title {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 2rem;
     padding-left: 2rem;
+    font-family: "Outfit";
+    font-weight: 300;
 
     &-body {
-      font-size: 28px;
-      line-height: 2.5rem;
+      font-size: 26px;
+      line-height: 38px;
       padding-left: 2rem;
+      font-family: "Newsreader";
+      font-weight: 300;
     }
   }
 
   &__list {
-    @include tablet {
-      display: flex;
-      flex-wrap: wrap;
-    }
+    display: flex;
+    flex-direction: column;
   }
 }
