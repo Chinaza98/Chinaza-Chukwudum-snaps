@@ -1,35 +1,18 @@
 import "./App.scss";
-import PhotoList from "./components/PhotoList/PhotoList";
-import Header from "./components/Header/Header";
-import FilterList from "./components/FilterList/FilterList";
-import Footer from "./components/Footer/footer";
-import { useState } from "react";
+import HomePage from "./pages/HomePage/HomePage";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PhotoPage from "./pages/PhotoPage/PhotoPage";
 
 function App() {
-  const [filterStatus, setFilterStatus] = useState(true);
-  const [selectedTag, setSelectedTag] = useState("");
-
-  function handleStatusClick() {
-    setFilterStatus(!filterStatus);
-  }
-
-  function handleTagClick(clickedTag) {
-    setSelectedTag(clickedTag);
-  }
   return (
     <>
-      <Header setStatus={handleStatusClick} />
-      <p className="filterlist__container">Selected Filter: {selectedTag}</p>
-      <div className="container">
-        {filterStatus ? (
-          <FilterList
-            handleTagClick={handleTagClick}
-            selectedTag={selectedTag}
-          />
-        ) : null}
-        <PhotoList selectedTag={selectedTag} />
-      </div>
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/details/:photoPageID" element={<PhotoPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
