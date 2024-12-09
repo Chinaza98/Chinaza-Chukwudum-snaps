@@ -2,6 +2,15 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/fonts" as *;
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Newsreader";
+}
+
 .detail {
   list-style-type: none;
   border: 3px solid #b7cec9;
@@ -12,7 +21,6 @@
   background-color: #e4efec;
   padding: 0;
   margin-left: 2rem;
-  // position: relative;
 
   &__image {
     width: 100%;
