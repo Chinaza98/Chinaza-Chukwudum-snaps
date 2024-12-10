@@ -16,7 +16,7 @@ function SingleImage({ photo }) {
       </div>
 
       <div className="detail__list">
-        <p>{photo.timestamp}</p>
+        <p>{new Date(photo.timestamp).toLocaleDateString()}</p>
         <p>
           <svg
             width="15"

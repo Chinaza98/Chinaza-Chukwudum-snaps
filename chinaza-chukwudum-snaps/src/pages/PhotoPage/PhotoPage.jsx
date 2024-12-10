@@ -45,7 +45,6 @@ function PhotoPage() {
 
       setComments([response.data, ...comments]);
     } catch (error) {
-      // postPhotoComments();
       console.error("Can't add comments");
     }
   }
@@ -84,9 +83,13 @@ function PhotoPage() {
         <ul className="comments__list">
           {comments.length > 0 ? (
             comments.map((comment) => (
-              <li key={comment.id}>
-                {comment.name} {comment.timestamp} {comment.comment}
-              </li>
+              <div className="comments__list-item">
+                <li key={comment.id} className="comments__list-row">
+                  <p>{comment.name}</p>
+                  <p>{new Date(comment.timestamp).toLocaleDateString()}</p>
+                </li>
+                <p>{comment.comment}</p>
+              </div>
             ))
           ) : (
             <p>No Comments</p>

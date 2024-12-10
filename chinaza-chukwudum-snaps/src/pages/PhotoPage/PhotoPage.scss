@@ -73,4 +73,15 @@ textarea {
     position: relative;
     left: 70%;
   }
+
+  &__list {
+    // border-bottom: solid #afafaf;
+    &-item {
+      border-bottom: solid #afafaf;
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
