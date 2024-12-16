@@ -9,9 +9,7 @@ function FilterList(props) {
   // Create a get request for the tags and set the variables to the response data.
 
   async function getTags() {
-    const response = await axios.get(
-      "https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=50c6bddc-8f40-4b7a-aff1-db4ec499fc16"
-    );
+    const response = await axios.get("http://localhost:8080/tags/");
     console.log(response.data);
     setfilters(response.data);
   }

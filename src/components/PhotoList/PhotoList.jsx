@@ -12,9 +12,7 @@ function PhotoList(props) {
 
   useEffect(() => {
     async function getPhotos() {
-      const response = await axios.get(
-        "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=50c6bddc-8f40-4b7a-aff1-db4ec499fc16"
-      );
+      const response = await axios.get("http://localhost:8080/photos/");
 
       console.log(response.data);
       setPhotos(response.data);

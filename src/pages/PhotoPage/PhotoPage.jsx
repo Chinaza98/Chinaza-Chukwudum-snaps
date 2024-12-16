@@ -15,7 +15,7 @@ function PhotoPage() {
   useEffect(() => {
     async function getPhotoDetails() {
       const response = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.photoPageID}?api_key=50c6bddc-8f40-4b7a-aff1-db4ec499fc1`
+        `http://localhost:8080/photos/${params.photoPageID}`
       );
       console.log(response.data);
       setPhoto(response.data);
@@ -27,7 +27,7 @@ function PhotoPage() {
   useEffect(() => {
     async function getPhotoComments() {
       const response = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.photoPageID}/comments?api_key=50c6bddc-8f40-4b7a-aff1-db4ec499fc1`
+        `http://localhost:8080/photos/${params.photoPageID}/comments`
       );
       console.log(response.data);
       setComments(response.data);
@@ -39,7 +39,7 @@ function PhotoPage() {
   async function postPhotoComments(newComment) {
     try {
       const response = await axios.post(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.photoPageID}/comments?api_key=50c6bddc-8f40-4b7a-aff1-db4ec499fc16`,
+        `http://localhost:8080/photos/${params.photoPageID}/comments`,
         newComment
       );
 
