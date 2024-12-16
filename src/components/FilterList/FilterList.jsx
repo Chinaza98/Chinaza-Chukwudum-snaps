@@ -5,8 +5,6 @@ import { useState, useEffect } from "react";
 
 function FilterList(props) {
   const [filters, setfilters] = useState([]);
-  // Create a state variable
-  // Create a get request for the tags and set the variables to the response data.
 
   async function getTags() {
     const response = await axios.get("http://localhost:8000/tags/");
@@ -15,7 +13,6 @@ function FilterList(props) {
   }
 
   useEffect(() => {
-    // define async fuction here
     getTags();
   }, []);
 

@@ -33,12 +33,29 @@ body {
     display: flex;
     padding: 0.5rem;
     margin-top: 1rem;
+    text-decoration: none;
   }
 
   &__list {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 0 1rem;
+    font-weight: bold;
+
+    &-logo {
+      margin-right: 0.5rem;
+      font-weight: bold;
+    }
+
+    &-likes {
+      font-weight: bold;
+    }
+  }
+
+  &__author {
+    margin-left: 1rem;
+    font-weight: bold;
   }
 }
 
@@ -47,13 +64,14 @@ textarea {
   height: 7rem;
   padding: 0.75rem;
   margin-top: 0.5rem;
+  border-radius: 1rem;
 }
 
 .comments {
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
 
   &__label {
     margin-bottom: 0.5rem;
@@ -61,6 +79,8 @@ textarea {
 
   &__input {
     margin-bottom: 1rem;
+    border-radius: 1rem;
+    height: 3rem;
   }
 
   &__button {
@@ -74,14 +94,33 @@ textarea {
     left: 70%;
   }
 
+  &__section {
+    padding: 0 1rem;
+  }
+
+  &__heading {
+    border-bottom: #e4efec solid;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    font-weight: 700;
+  }
+
   &__list {
-    // border-bottom: solid #afafaf;
+    padding: 1rem;
     &-item {
-      border-bottom: solid #afafaf;
+      border-bottom: solid #e4efec;
     }
     &-row {
       display: flex;
       justify-content: space-between;
+    }
+
+    &-name {
+      color: $color-accent;
+    }
+
+    &-date {
+      color: $color-accent;
     }
   }
 }

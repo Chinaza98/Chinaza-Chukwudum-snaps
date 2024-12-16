@@ -8,7 +8,6 @@ import axios from "axios";
 function PhotoList(props) {
   const [photos, setPhotos] = useState([]);
   console.log("photolist props:", props);
-  //  Get photos from API and set state photos to whatever is returned.
 
   useEffect(() => {
     async function getPhotos() {
@@ -20,10 +19,6 @@ function PhotoList(props) {
     getPhotos();
   }, []);
 
-  // useEffect(() => {
-  //   getPhotos();
-  // }, []);
-
   let filteredPhotos = [];
   console.log(props.PhotoItemselectedTag !== "");
 
@@ -34,12 +29,8 @@ function PhotoList(props) {
       console.log(photo.tags);
       return photo.tags.includes(props.selectedTag);
     });
-    // filteredPhotos = photos;
   }
-  //  If selectedTag = ""
-  // show all photos
-  // else
-  // show the filtered photos
+
   return (
     <section className="photos">
       <p className="photos__title">Our mission:</p>
@@ -57,8 +48,3 @@ function PhotoList(props) {
 }
 
 export default PhotoList;
-
-// filteredPhotos = photos.filter((photo)
-// => {
-//   return photo.tags.includes(props.selectedTag);
-// });

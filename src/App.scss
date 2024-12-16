@@ -21,6 +21,12 @@ body {
     font-family: "Newsreader";
     font-weight: 400;
     font-size: 32px;
+    text-decoration: none;
+
+    &-link {
+      text-decoration: none;
+      color: $text-primary;
+    }
   }
 
   &__button {
@@ -36,6 +42,16 @@ body {
   &__button:hover {
     background-color: $color-accent;
     color: $color-light;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-accent;
+    font-size: 18px;
+
+    &-logo {
+      margin-right: 1rem;
+    }
   }
 }
 

@@ -78,17 +78,19 @@ function PhotoPage() {
         <button className="comments__button">Submit</button>
       </form>
 
-      <div>
-        <p>Comments</p>
+      <div className="comments__section">
+        <p className="comments__heading">Comments</p>
         <ul className="comments__list">
           {comments.length > 0 ? (
             comments.map((comment) => (
               <div className="comments__list-item">
                 <li key={comment.id} className="comments__list-row">
-                  <p>{comment.name}</p>
-                  <p>{new Date(comment.timestamp).toLocaleDateString()}</p>
+                  <p className="comments__list-name">{comment.name}</p>
+                  <p className="comments__list-date">
+                    {new Date(comment.timestamp).toLocaleDateString()}
+                  </p>
                 </li>
-                <p>{comment.comment}</p>
+                <p className="comments__list-description">{comment.comment}</p>
               </div>
             ))
           ) : (
