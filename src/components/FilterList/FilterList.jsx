@@ -9,7 +9,7 @@ function FilterList(props) {
   // Create a get request for the tags and set the variables to the response data.
 
   async function getTags() {
-    const response = await axios.get("http://localhost:8080/tags/");
+    const response = await axios.get("http://localhost:8000/tags/");
     console.log(response.data);
     setfilters(response.data);
   }

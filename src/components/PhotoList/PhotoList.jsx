@@ -12,7 +12,7 @@ function PhotoList(props) {
 
   useEffect(() => {
     async function getPhotos() {
-      const response = await axios.get("http://localhost:8080/photos/");
+      const response = await axios.get("http://localhost:8000/photos/");
 
       console.log(response.data);
       setPhotos(response.data);
